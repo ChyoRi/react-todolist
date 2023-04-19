@@ -1,15 +1,18 @@
-import { useState } from 'react';
+import { useState } from "react";
 import styled from "styled-components";
+import Modal from './Modal';
 
 const Main = () => {
+    
     const [isOpen, setIsOpen] = useState(false);
 
-    const openModalHandler = () => {
-        setIsOpen(!isOpen);
-    }
+    const open = () => setIsOpen(true);
+    const close = () => setIsOpen(false);
+
     return (
         <MainContainer>
-            <ModalOpenBtn onClick={openModalHandler}>+</ModalOpenBtn>
+            <ModalOpenBtn onClick={open}>+</ModalOpenBtn>
+            {isOpen && <Modal close={close} />}
         </MainContainer>
     )
 }

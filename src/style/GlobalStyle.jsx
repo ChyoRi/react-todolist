@@ -27,6 +27,7 @@ const GlobalStyle = createGlobalStyle`
     }
 
     input {
+        background-color: transparent;
         border: none;
 
         &:focus {
