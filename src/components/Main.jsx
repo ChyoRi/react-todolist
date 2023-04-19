@@ -1,9 +1,15 @@
+import { useState } from 'react';
 import styled from "styled-components";
 
 const Main = () => {
+    const [isOpen, setIsOpen] = useState(false);
+
+    const openModalHandler = () => {
+        setIsOpen(!isOpen);
+    }
     return (
         <MainContainer>
-            <ModalOpenBtn>+</ModalOpenBtn>
+            <ModalOpenBtn onClick={openModalHandler}>+</ModalOpenBtn>
         </MainContainer>
     )
 }

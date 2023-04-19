@@ -8,7 +8,6 @@ const GlobalStyle = createGlobalStyle`
     }
 
     body {
-        position: relative;
         height: 100vh;
     }
 
@@ -25,6 +24,18 @@ const GlobalStyle = createGlobalStyle`
         border: none;
         background-color: transparent;
         cursor: pointer;
+    }
+
+    input {
+        border: none;
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    #root {
+        position: relative;
     }
 `;
 
